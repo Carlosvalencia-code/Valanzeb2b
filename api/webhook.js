@@ -12,7 +12,7 @@ const bot = new TelegramBot(token);
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).send('Method Not Allowed');
+    return res.status(200).send('Valanze B2B Webhook is active and listening!');
   }
 
   // 1. Seguridad: Validar token secreto de Telegram
@@ -48,6 +48,9 @@ export default async function handler(req, res) {
     return res.status(200).send('OK');
   } catch (error) {
     console.error('[Webhook Error]', error);
-    return res.status(500).send('Internal Error');
+    return res.status(500).json({
+      error: error.message || 'Unknown Error',
+      stack: error.stack
+    });
   }
 }
