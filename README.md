@@ -59,16 +59,16 @@ Valanze B2B reemplaza los cuadernos de papel y los costosos sistemas ERP de escr
 | **Comprar Mercadería** | `+24 sixpack cristal 96` | Muestra selector: Factura / Boleta / Sin Sustento. Suma 24 al Kardex y resta S/ 96 de caja. |
 | **Vender Producto** | `venta 2 sixpack cristal 32` | Descuenta 2 six-packs del inventario y suma S/ 32 a la caja del turno. |
 | **Gasto de Caja Chica** | `25 bolsas y hielo` | Abre selector de comprobante y descuenta S/ 25 de la caja de gaveta. |
-| **Consultar Existencias** | `/stock` o `/kardex` | Muestra lista de productos, stock remanente y alertas de stock bajo. |
-| **Cierre de Turno** | `/cerrar_turno` | Emite el reporte de efectivo teórico esperado vs ventas digitales (Yape/Plin). |
+| **Consultar Existencias** | `/stock` | Muestra lista de productos, stock remanente y alertas de stock bajo. |
+| **Cierre de Turno** | `/caja` o `/cierre` | Emite el reporte de efectivo teórico esperado vs ventas digitales (Yape/Plin). |
 
 ### 2. Comandos Exclusivos del Administrador (Dueño)
 | Comando | Parámetros | Propósito |
 |---|---|---|
-| `/producto` | `[SKU] [Nombre] [Precio_Venta] [Costo_Base]` | Da de alta un nuevo producto en el catálogo oficial. |
-| `/staff` | `[Telegram_ID] [Nombre] [ADMIN o STAFF]` | Autoriza a un empleado para operar el bot. |
+| `/producto` | `[Código] [Nombre] [Precio_Venta] [Costo_Base]` | Agrega un nuevo producto a tu lista oficial. |
+| `/equipo` | `[ID_Telegram] [Nombre] [STAFF o ADMIN]` | Permite que un empleado use el bot. |
 | `/balance` | *(Sin parámetros)* | Muestra ventas, egresos, efectivo en gaveta y valor total del stock. |
-| `/exportar_contable` | `[YYYY-MM]` (Opcional) | Descarga el archivo de trabajo estructurado para enviar al contador. |
+| `/excel` | `[YYYY-MM]` (Opcional) | Descarga el archivo de trabajo estructurado para enviar al contador. |
 
 ---
 
